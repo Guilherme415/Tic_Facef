@@ -3,14 +3,13 @@ package br.com.unifacef.tic.models;
 import br.com.unifacef.tic.models.enums.AdministratorEnum;
 
 public class Student extends Associate {
-	private Integer Code, CourseId;
+	private Integer CourseId;
 	
 	public Student() {}
 
 	public Student(String cPF, String name, String email, AdministratorEnum administrator, Integer code,
 			Integer courseId) {
-		super(cPF, name, email, administrator);
-		Code = code;
+		super(code, cPF, name, email, administrator);
 		CourseId = courseId;
 	}
 

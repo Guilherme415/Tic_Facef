@@ -5,16 +5,26 @@ import java.util.Objects;
 import br.com.unifacef.tic.models.enums.AdministratorEnum;
 
 public class Associate {
+	protected Integer Code;
 	protected String CPF, Name, Email;
 	protected AdministratorEnum Administrator;
 	
 	public Associate() {}
 
-	public Associate(String cPF, String name, String email, AdministratorEnum administrator) {
+	public Associate(Integer code, String cPF, String name, String email, AdministratorEnum administrator) {
+		this.Code = code;
 		CPF = cPF;
 		Name = name;
 		Email = email;
 		Administrator = administrator;
+	}
+	
+	public Integer getCode() {
+		return Code;
+	}
+
+	public void setCode(Integer code) {
+		Code = code;
 	}
 
 	public String getCPF() {
@@ -51,13 +61,13 @@ public class Associate {
 
 	@Override
 	public String toString() {
-		return "Associate [CPF=" + CPF + ", Name=" + Name + ", Email=" + Email + ", Administrator=" + Administrator
+		return "Associate [Id=" + Code + ", CPF=" + CPF + ", Name=" + Name + ", Email=" + Email + ", Administrator=" + Administrator
 				+ "]";
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(Administrator, CPF, Email, Name);
+		return Objects.hash(Code);
 	}
 
 	@Override
@@ -69,7 +79,6 @@ public class Associate {
 		if (getClass() != obj.getClass())
 			return false;
 		Associate other = (Associate) obj;
-		return Administrator == other.Administrator && Objects.equals(CPF, other.CPF)
-				&& Objects.equals(Email, other.Email) && Objects.equals(Name, other.Name);
-	};
+		return Objects.equals(Code, other.Code);
+	}
 }

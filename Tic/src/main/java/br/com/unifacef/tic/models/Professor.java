@@ -11,22 +11,22 @@ public class Professor extends Associate {
 	
 	public Professor() {}
 
-	public Professor(String cPF, String name, String email, AdministratorEnum administrator) {
-		super(cPF, name, email, administrator);
+	public Professor(Integer codig, String cPF, String name, String email, AdministratorEnum administrator) {
+		super(codig, cPF, name, email, administrator);
 		this.Schedular = new ArrayList<>();
 		this.Subjects = new ArrayList<>();
 	}
 	
-	public Professor(String cPF, String name, String email, AdministratorEnum administrator,
+	public Professor(Integer codig, String cPF, String name, String email, AdministratorEnum administrator,
 			ArrayList<Calendar> schedular) {
-		super(cPF, name, email, administrator);
+		super(codig, cPF, name, email, administrator);
 		Schedular = schedular;
 		this.Subjects = new ArrayList<>();
 	}
 	
-	public Professor(String cPF, String name, String email, AdministratorEnum administrator,
+	public Professor(Integer codig, String cPF, String name, String email, AdministratorEnum administrator,
 			ArrayList<Calendar> schedular, ArrayList<Subject> subjects) {
-		super(cPF, name, email, administrator);
+		super(codig, cPF, name, email, administrator);
 		Schedular = schedular;
 		Subjects = subjects;
 	}

@@ -3,6 +3,9 @@ package br.com.unifacef.tic.models;
 import java.util.ArrayList;
 import java.util.Objects;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Course {
 	private Integer Id;
 	private String Name;
