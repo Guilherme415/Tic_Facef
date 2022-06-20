@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistema Academico</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="script.js"> </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+</head>
+  <body onLoad="consulta()"> <!-- quando a página for carregada -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"> SistemaAcademico </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ConteudoMenu"> 
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="cadastro">
+            <div class="container">
+                <h3> Cadastro / Atualização de IES </h3>
+                <form>
+                    <input type="number" id="id" hidden/>
+                    <div class="mb-3">
+                        <label for="cnpj" class="form-label"> CNPJ </label>
+                        <input type="text" class="form-control" id="cnpj"/>
+                    </div>
+                    <div class="mb-3">
+                            <label for="nome" class="form-label"> Nome </label>
+                            <input type="text" class="form-control" id="nome"/>
+                    </div>
+                    <div class="mb-3">
+                            <label for="cidade" class="form-label"> Cidade </label>
+                            <input type="text" class="form-control" id="cidade"/>
+                    </div>
+                    <button onClick="cadastrar()" type="button" class="btn btn-primary"> Confirmar </button>
+                </form>
+            </div>
+        </section>
+        <section id="consulta">
+            <div class="container">
+                <h3> Consulta / Remoção de IES </h3>
+                <table class="table">
+                    <thead>
+                        <tr> 
+                            <th> CNPJ </th>
+                            <th> Nome </th> <th> Cidade </th> 
+                        </tr>    
+                    </thead>
+                    <tbody id="corpoTabela">
+                        <!-- os dados da IES virão aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
