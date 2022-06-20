@@ -2,9 +2,14 @@ package br.com.unifacef.tic.models;
 
 import java.util.Objects;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 import br.com.unifacef.tic.models.enums.AdministratorEnum;
 
 public class Associate {
+	@Id
 	protected Integer Code;
 	protected String CPF, Name, Email;
 	protected AdministratorEnum Administrator;

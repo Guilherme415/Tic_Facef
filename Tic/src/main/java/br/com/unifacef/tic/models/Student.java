@@ -1,7 +1,12 @@
 package br.com.unifacef.tic.models;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import br.com.unifacef.tic.models.enums.AdministratorEnum;
 
+@Entity
+@Table(name = "tb_aluno")
 public class Student extends Associate {
 	private Integer CourseId;
 	

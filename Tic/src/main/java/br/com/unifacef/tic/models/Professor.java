@@ -3,8 +3,13 @@ package br.com.unifacef.tic.models;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import br.com.unifacef.tic.models.enums.AdministratorEnum;
 
+@Entity
+@Table(name = "tb_professor")
 public class Professor extends Associate {
 	private ArrayList<Calendar> Schedular;
 	private ArrayList<Subject> Subjects;

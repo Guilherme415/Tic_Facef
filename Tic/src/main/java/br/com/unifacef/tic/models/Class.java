@@ -2,8 +2,20 @@ package br.com.unifacef.tic.models;
 
 import java.util.Objects;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_turma")
 public class Class {
-	private Integer Id, Semester;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer Id;
+	private Integer Semester;
 	private	Course course;
 	
 	public Class() {};
